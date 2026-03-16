@@ -27,10 +27,14 @@ app = FastAPI(
 # ── CORS (adjust origins for production) ──────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins     = ["*"],   # ← lock this down to your frontend URL in prod
-    allow_credentials = True,
-    allow_methods     = ["*"],
-    allow_headers     = ["*"],
+    allow_origins=[
+        "https://exam-portal-nine-puce.vercel.app",
+        "http://localhost:3000",
+        "*"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ── Routers ────────────────────────────────────────────────────────────────
