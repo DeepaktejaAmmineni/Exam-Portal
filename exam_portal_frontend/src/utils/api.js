@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'https://exam-portal-production-37cb.up.railway.app',
 });
 
 // Attach JWT token to every request automatically
